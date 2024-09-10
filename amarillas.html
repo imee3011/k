@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Hermosa Chica</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f0c3;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff9c00;
+            margin-bottom: 50px; /* Añadimos un poco más de margen debajo del texto */
+        }
+        .flower {
+            position: relative;
+            width: 300px; /* Tamaño grande de la flor */
+            height: 300px;
+            margin: 0 auto; /* Centramos la flor */
+        }
+        .flower .petal {
+            position: absolute;
+            width: 120px; /* Pétalos grandes */
+            height: 120px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        .flower .petal:nth-child(1) {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flower .petal:nth-child(2) {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .flower .petal:nth-child(3) {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        .flower .petal:nth-child(4) {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flower .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px; /* Centro grande */
+            height: 80px;
+            background-color: orange;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .flower {
+            animation: spin 4s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para mi hermosa chica</h1>
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+</body>
+</html>
